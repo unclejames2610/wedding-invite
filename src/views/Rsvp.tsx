@@ -22,11 +22,14 @@ export default function Rsvp() {
     setLoading(true);
     e.preventDefault();
 
-    console.log({ name, email });
-    setName("");
-    setEmail("");
-    setSuccess(true);
-    setErrorText("");
+    setTimeout(() => {
+      console.log({ name, email });
+      setName("");
+      setEmail("");
+      setSuccess(true);
+      setErrorText("");
+      setLoading(false);
+    }, 2000);
   }
 
   useEffect(() => {
@@ -84,7 +87,7 @@ export default function Rsvp() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="h-12 rounded-xl border border-neutral-200 bg-white px-4 outline-none focus:ring-2 focus:ring-red-300"
+              className="h-12 rounded-xl border border-neutral-200 bg-white px-4 outline-none focus:ring-2 focus:ring-red-300 filter-none autofill:bg-transparent"
             />
             <input
               type="email"
@@ -92,7 +95,7 @@ export default function Rsvp() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="h-12 rounded-xl border border-neutral-200 bg-white px-4 outline-none focus:ring-2 focus:ring-red-300"
+              className="h-12 rounded-xl border border-neutral-200 bg-white px-4 outline-none focus:ring-2 focus:ring-red-300 filter-none autofill:bg-transparent"
             />
             {errorText !== "" && (
               <p className="text-red-500 text-xs text-center md:text-sm font-medium">
