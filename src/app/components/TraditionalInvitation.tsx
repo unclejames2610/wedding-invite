@@ -228,25 +228,35 @@ export default function TraditionalInvitation({
 }
 
 function StripeBand({ position }: { position: "top" | "bottom" }) {
+  const isTop = position === "top";
   return (
     <div
       className={
-        (position === "top" ? "top-0" : "bottom-0") +
-        " absolute left-0 right-0 h-14 md:h-16 opacity-70"
+        (isTop ? "top-0 rounded-t-xl" : "bottom-0 rounded-b-xl") +
+        " absolute left-0 right-0 h-14 md:h-16 opacity-70 overflow-hidden"
       }
       aria-hidden
     >
       {/* Idoma inspired stripes: bold red/black with a thin gold keyline */}
-      <div className="absolute inset-0" style={{ backgroundColor: "black" }} />
       <div
-        className="absolute inset-[3px]"
+        className={
+          "absolute inset-0 " + (isTop ? "rounded-t-xl" : "rounded-b-xl")
+        }
+        style={{ backgroundColor: "black" }}
+      />
+      <div
+        className={
+          "absolute inset-[3px] " + (isTop ? "rounded-t-lg" : "rounded-b-lg")
+        }
         style={{
           background:
             "repeating-linear-gradient(90deg, #C1121F 0 22px, #000 22px 44px)",
         }}
       />
       <div
-        className="absolute inset-0"
+        className={
+          "absolute inset-0 " + (isTop ? "rounded-t-xl" : "rounded-b-xl")
+        }
         style={{ border: `2px solid ${GOLD}`, pointerEvents: "none" }}
       />
     </div>
