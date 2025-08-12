@@ -2,28 +2,18 @@
 import React from "react";
 import { italianno, sourceSerif4 } from "../fonts/fonts";
 
-/**
- * Idoma Traditional Wedding Invitation (Red/Black + Gold accents)
- * ------------------------------------------------------------------
- * - Replaces floral ornaments with Idoma-inspired woven stripe bands
- * - Uses gold (#EBC776) for highlights
- * - Fully responsive; print-friendly container ratio (A5-ish)
- *
- * Customize the text via props.
- */
-
 type InvitationProps = {
   couple?: { bride: string; groom: string };
-  title?: string; // e.g., "Traditional Wedding Invitation"
-  date?: string; // e.g., "Saturday • Sept. 27, 2025"
-  time?: string; // e.g., "10:00 AM"
-  venue?: string; // multi-line allowed with <br/>
+  title?: string;
+  date?: string;
+  time?: string;
+  venue?: string;
   parentsLeft?: string;
   parentsRight?: string;
-  monogramSrc?: string; // optional logo
+  monogramSrc?: string;
 };
 
-const GOLD = "#EBC776"; // from your logo swatch
+const GOLD = "#EBC776";
 
 export default function TraditionalInvitation({
   couple = { bride: "Princess Amuta", groom: "Raphael Ochil" },
@@ -237,7 +227,6 @@ function StripeBand({ position }: { position: "top" | "bottom" }) {
       }
       aria-hidden
     >
-      {/* Idoma inspired stripes: bold red/black with a thin gold keyline */}
       <div
         className={
           "absolute inset-0 " + (isTop ? "rounded-t-xl" : "rounded-b-xl")
@@ -264,7 +253,6 @@ function StripeBand({ position }: { position: "top" | "bottom" }) {
 }
 
 function CornerBeads({ side }: { side: "tl" | "br" }) {
-  // Simple gold bead cluster drawn in SVG (evokes coral beads)
   const pos =
     side === "tl"
       ? "top-6 left-6 md:top-8 md:left-8"

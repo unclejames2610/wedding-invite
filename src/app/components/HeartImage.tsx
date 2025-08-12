@@ -4,9 +4,9 @@ import React from "react";
 type HeartImageProps = {
   src: string;
   alt?: string;
-  className?: string; // positioning/size (Tailwind)
-  borderColor?: string; // e.g. "#fff" or "rgba(235,199,118,.95)"
-  borderWidth?: number; // px
+  className?: string;
+  borderColor?: string;
+  borderWidth?: number;
 };
 
 export default function HeartImage({
@@ -23,7 +23,6 @@ export default function HeartImage({
       aria-label={alt}
       role="img"
     >
-      {/* Smooth heart path inset a bit so border isn't clipped */}
       <defs>
         <clipPath id="heartClip">
           <path
@@ -39,16 +38,14 @@ export default function HeartImage({
         </clipPath>
       </defs>
 
-      {/* Image clipped to heart */}
       <image
         href={src}
         width="100%"
         height="100%"
-        preserveAspectRatio="xMidYMin slice" // or xMidYMax, xMinYMid, xMaxYMid
+        preserveAspectRatio="xMidYMin slice"
         clipPath="url(#heartClip)"
       />
 
-      {/* Optional smooth border */}
       {borderWidth > 0 && (
         <path
           d="

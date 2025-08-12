@@ -79,7 +79,6 @@ export default function Rsvp() {
           onSubmit={onSubmit}
           className="mt-8 bg-white rounded-2xl shadow-xl p-4 md:p-6"
         >
-          {/* Inline row on desktop, stacked on mobile */}
           <div className="grid gap-3 md:grid-cols-[1fr_1fr_auto]">
             <input
               type="text"

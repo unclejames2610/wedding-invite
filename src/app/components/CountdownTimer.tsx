@@ -2,18 +2,11 @@
 import React from "react";
 import "animate.css";
 
-/**
- * Minimal wedding countdown (no background, no CTA)
- * ------------------------------------------------------------
- * Usage:
- * <CountdownTimer target={new Date("2025-12-20T14:00:00")} />
- */
-
 export type CountdownTimerProps = {
   target: Date | string;
   onComplete?: () => void;
-  className?: string; // wrapper class (for layout/spacing)
-  pillClassName?: string; // style the bubbles
+  className?: string;
+  pillClassName?: string;
 };
 
 function getTimeLeft(target: Date) {
