@@ -21,9 +21,9 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Traditional Wedding Invite",
+  title: "Traditional Wedding Invitation",
   description:
-    "Traditional wedding invitation for Raphael Ochil & Princess Amuta",
+    "Traditional wedding invitation for Raphael Ochil & Princess Amuta on Saturday, 27th October, 2025",
   icons: {
     icon: "/assets/logo.png",
   },

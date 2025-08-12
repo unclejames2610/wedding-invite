@@ -55,7 +55,7 @@ export default function CountdownTimer({
   const Pill = ({ value, label }: { value: number; label: string }) => (
     <div
       className={
-        "flex flex-col items-center justify-center w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full shadow-xl select-none opacity-80 animate__animated animate__pulse  animate__infinite " +
+        "flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full shadow-xl select-none opacity-80 animate__animated animate__pulse  animate__infinite " +
         (pillClassName ?? "bg-gradient-to-br from-red-300 to-red-950")
       }
       aria-label={`${value} ${label}`}

@@ -26,8 +26,10 @@ const Events = () => {
       text: "Once the vows are sealed, it's time to let loose, bring your dancing shoes, your biggest smiles, and an appetite for food, laughter, and late-night memories.",
     },
   ];
+
+  const url = process.env.NEXT_PUBLIC_GALLERY_LINK;
   return (
-    <div className="flex flex-col w-full relative ">
+    <div className="flex flex-col w-full relative " id="events">
       <img
         src="/assets/weddingLocation.jpg"
         alt="wedding location"
@@ -40,7 +42,7 @@ const Events = () => {
         </h5>
 
         <h3
-          className={`${lavishlyYours.className} font-semibold text-5xl lg:text-7xl text-custom-gold mt-4`}
+          className={`${lavishlyYours.className} font-semibold text-5xl lg:text-7xl text-custom-gold mt-4 text-center`}
         >
           Wedding Events
         </h3>
@@ -65,14 +67,10 @@ const Events = () => {
         </div>
 
         <FadeIn direction="up" delay={0.1}>
-          <Link
-            href="https://larinimagery.pixieset.com/princessproposal/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link href={url!!} target="_blank" rel="noreferrer">
             <Button
               borderRadius="9999px"
-              className="bg-custom-green2 border-custom-green2 text-white tracking-wider  transition-all duration-500 hover:shadow-xl flex items-center gap-1 text-base "
+              className="bg-custom-green2 border-custom-green2 text-white  hover:bg-custom-green hover:border-custom-green tracking-wider  transition-all duration-500 hover:shadow-xl flex items-center gap-1 text-base "
             >
               View Gallery{" "}
               <IoIosArrowRoundForward className="text-white text-2xl" />

@@ -8,28 +8,31 @@ import "animate.css";
 
 const Invitation = () => {
   return (
-    <div className="flex flex-col w-full min-h-screen relative bg-white">
+    <div
+      className="flex flex-col w-full min-h-screen relative bg-white"
+      id="invitation"
+    >
       {/* Page floral background */}
       <WeddingBackdrop className="absolute inset-0 z-0" />
       {/* Heart-shaped images */}
-      <FadeIn direction="left" delay={0.05}>
-        <HeartImage
-          src="/assets/coupleImage1.jpg"
-          alt="Couple Top"
-          className="hidden md:block absolute top-6 right-6 lg:top-8 lg:right-8 2xl:top-12 2xl:right-12 w-48 h-48 lg:w-64 lg:h-64 2xl:w-[400px] 2xl:h-[400px] z-20 animate__animated animate__pulse  animate__infinite"
-          borderColor="#EBC776"
-          borderWidth={1}
-        />
-      </FadeIn>
-      <FadeIn delay={0.05} direction="right">
-        <HeartImage
-          src="/assets/coupleImage3.jpg"
-          alt="Couple Bottom"
-          className="hidden md:block absolute bottom-6 left-6 lg:bottom-8 lg:left-8 2xl:bottom-12 2xl:left-12 w-48 h-48  lg:w-64 lg:h-64 2xl:w-[400px] 2xl:h-[400px] z-20 animate__animated animate__pulse  animate__infinite"
-          borderColor="#EBC776"
-          borderWidth={1}
-        />
-      </FadeIn>
+      {/* <FadeIn direction="down" delay={0.2}> */}
+      <HeartImage
+        src="/assets/coupleImage1.jpg"
+        alt="Couple Top"
+        className="hidden md:block absolute top-6 right-6 lg:top-8 lg:right-8 2xl:top-12 2xl:right-12 w-48 h-48 lg:w-64 lg:h-64 2xl:w-[400px] 2xl:h-[400px] z-20 animate__animated animate__pulse  animate__infinite"
+        borderColor="#EBC776"
+        borderWidth={1}
+      />
+      {/* </FadeIn> */}
+      {/* <FadeIn delay={0.2} direction="up"> */}
+      <HeartImage
+        src="/assets/coupleImage3.jpg"
+        alt="Couple Bottom"
+        className="hidden md:block absolute bottom-6 left-6 lg:bottom-8 lg:left-8 2xl:bottom-12 2xl:left-12 w-48 h-48  lg:w-64 lg:h-64 2xl:w-[400px] 2xl:h-[400px] z-20 animate__animated animate__pulse  animate__infinite"
+        borderColor="#EBC776"
+        borderWidth={1}
+      />
+      {/* </FadeIn> */}
 
       <div className="flex flex-col p-4 px-2 md:p-8 lg:p-12 gap-4 items-center h-full w-full ">
         <h5 className="uppercase text-xs lg:text-sm text-custom-green text-center tracking-widest font-bold">

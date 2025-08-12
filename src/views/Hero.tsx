@@ -4,6 +4,7 @@ import { beauRivage } from "@/app/fonts/fonts";
 import React, { useEffect, useState } from "react";
 import "animate.css";
 import FadeIn from "@/app/components/FadeIn";
+import Navbar from "@/app/components/Navbar";
 
 const Hero = () => {
   const [isClient, setIsClient] = useState(false);
@@ -11,19 +12,28 @@ const Hero = () => {
   useEffect(() => {
     setIsClient(true);
   }, []);
+
+  const url = process.env.NEXT_PUBLIC_HERO_VIDEO;
   return (
-    <div className="w-full min-h-screen relative flex items-center justify-center">
-      <img
+    <div
+      className="w-full min-h-screen relative flex items-center justify-center"
+      id="home"
+    >
+      {/* <img
         src="/assets/logo.png"
         alt="logo"
         className="absolute z-10 left-4 top-4 h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20"
-      />
+      /> */}
+
+      <div className="absolute z-10 w-full left-0  top-0">
+        <Navbar />
+      </div>
       <div className="absolute w-full h-full opacity-60">
         <video
           crossOrigin="anonymous"
           autoPlay
           muted
-          src="https://res.cloudinary.com/diijwxdjv/video/upload/v1754920008/Untitled_compressed2_mkj4ue.mp4"
+          src={url}
           loop
           className="object-cover w-full h-full"
         ></video>
@@ -31,17 +41,17 @@ const Hero = () => {
 
       <div className="bg-custom-green2 w-full absolute h-full opacity-70" />
 
-      <div className="flex flex-col items-center w-full justify-center gap-4 z-10 ">
+      <div className="flex flex-col items-center w-full justify-center gap-4 z-10 p-4">
         <FadeIn direction="down" delay={0.05}>
           <h2
-            className={`${beauRivage.className} text-4xl md:text-6xl 2xl:text-8xl text-custom-gold z-10`}
+            className={`${beauRivage.className} text-4xl sm:text-5xl md:text-6xl 2xl:text-8xl text-custom-gold z-10 text-center`}
           >
             Raphael & Princess
           </h2>
         </FadeIn>
 
         <FadeIn direction="down" delay={0.1}>
-          <h5 className="tracking-wider uppercase text-white font-medium text-base md:text-lg">
+          <h5 className="tracking-wider uppercase text-white font-medium text-base md:text-lg text-center">
             WE ARE GETTING MARRIED
           </h5>{" "}
         </FadeIn>

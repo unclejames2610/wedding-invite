@@ -7,6 +7,7 @@ import FadeIn from "@/app/components/FadeIn";
 import Hero from "./Hero";
 import Invitation from "./Invitation";
 import Events from "./Events";
+import Rsvp from "./Rsvp";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Hero />
       <Invitation />
       <Events />
+      <Rsvp />
     </div>
   );
 };
