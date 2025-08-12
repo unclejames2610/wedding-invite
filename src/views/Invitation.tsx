@@ -31,7 +31,7 @@ const Invitation = () => {
         />
       </FadeIn>
 
-      <div className="flex flex-col p-4 md:p-8 lg:p-12 gap-4 items-center h-full w-full ">
+      <div className="flex flex-col p-4 px-2 md:p-8 lg:p-12 gap-4 items-center h-full w-full ">
         <h5 className="uppercase text-xs lg:text-sm text-custom-green text-center tracking-widest font-bold">
           INVITATION
         </h5>

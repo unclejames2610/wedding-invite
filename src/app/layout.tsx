@@ -22,7 +22,8 @@ const workSans = Work_Sans({
 
 export const metadata: Metadata = {
   title: "Traditional Wedding Invite",
-  description: "Traditional wedding invitation for Raphael & Princess",
+  description:
+    "Traditional wedding invitation for Raphael Ochil & Princess Amuta",
   icons: {
     icon: "/assets/logo.png",
   },
