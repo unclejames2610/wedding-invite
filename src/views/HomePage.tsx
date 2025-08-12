@@ -11,7 +11,7 @@ import Rsvp from "./Rsvp";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col w-full min-h-screen">
+    <div className="flex flex-col w-full h-full overflow-x-hidden">
       <Hero />
       <Invitation />
       <Events />
